@@ -18,7 +18,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
         run: python -c "import sys; print(sys.version)" > python_version_${{ matrix.python-version }}.txt
-      - name: Upload Apk
+      - name: Upload txt
         uses: actions/upload-artifact@v3
         with:
           name: Action-test
