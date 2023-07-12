@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Action-test
-          path: .github/workflows/aciton_test
+          path: .github/workflows/
