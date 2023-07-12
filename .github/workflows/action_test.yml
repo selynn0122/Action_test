@@ -18,3 +18,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
         run: python -c "import sys; print(sys.version)" > python_version_${{ matrix.python-version }}.txt
+      - name: Upload Apk
+        uses: actions/upload-artifact@v3
+        with:
+          name: Action-test
+          path: Action_test/.github/workflows/action_test.yml
