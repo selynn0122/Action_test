@@ -9,14 +9,15 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
+        
 
     steps:
+      - run: mkdir -r action_test
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-        run: mkdir -r action_test
       - name: Display Python version
         run: python -c "import sys; print(sys.version)" > .github/workflows/action_test/python_version_${{ matrix.python-version }}.txt
       - name: Upload txt
