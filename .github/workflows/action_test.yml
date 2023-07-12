@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-        run: python -c "import sys; print(sys.version)" > .github/workflows/action_test/python_version_${{ matrix.python-version }}.txt
+        run: python -c "import sys; print(sys.version)" > .github/workflows/python_version_${{ matrix.python-version }}.txt
       - name: Upload txt
         uses: actions/upload-artifact@v3
         with:
